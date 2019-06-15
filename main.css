@@ -3,10 +3,10 @@ background-color: yellow;
 }
 body {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 150px
+  margin-top: 150px;
 }
 
 h1 {
@@ -33,4 +33,12 @@ input {
 
 .AddOption {
   margin-top: 10px;
+}
+
+.ResultSection {
+  height: 300px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px
 }

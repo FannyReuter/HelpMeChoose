@@ -1,25 +1,33 @@
 <!doctype html>
 <html lang=en>
+  <img src="https://media.giphy.com/media/vaRCdgM0fLNrW/giphy.gif" alt="movie gif">
   <head>
     <meta charset=utf-8>
-    <title>Help Me Choose</title>
+    <title>Fredagsfilmen</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Help me choose between...</h1>
+    <h1>Fredagsfilmen!</h1>
+    <h2 class="ChooseText">Hjälp mig välja mellan...</h2>
     <div class="InputSection">
       <div class="inputs">
-        <input placeholder="Something..."></input>
+        <input placeholder="Alternativ..."></input>
       </div>
-      <button class="AddOption">Add</button>
+      <button class="AddOption">Lägg till</button>
     </div>
     <div class="ResultSection"></div>
-    <button class='submit'>Go!</button>
+    <button class='submit'>Gå!</button>
+      <div class="ResultPage">
+        <button class='back'>Börja om</button>
+        <h2 class="WinnerIs">Vinnaren är:</h2>
+      </div>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
       $(function() {
         $('.ResultSection').hide()
+        $('.ResultPage').hide()
 
         var add_Option = function() {
           $('.inputs').append('<input></input>')
@@ -32,6 +40,7 @@
           $('.ResultSection').css('display', 'flex')
           $('input').each(function() {
             options.push($(this).val())
+          $('.ChooseText').hide()
           })
           var winner = options[Math.floor(Math.random() * options.length)]
           console.log(winner)

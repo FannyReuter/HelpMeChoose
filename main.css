@@ -1,18 +1,43 @@
-button {
-background-color: yellow;
+.submit {
+background-color: #49beb7;
+border-color: #085f63;
+width: 60px;
+height: 40px;
+font-size: 15px;
+color: #085f63;
+border-radius: 30px;
 }
+
+.AddOption {
+  background-color: #49beb7;
+  border-color: #085f63;
+  width: 80px;
+  color: #085f63;
+  border-radius: 30px;
+}
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 150px;
+  background-color: #f5e1da;
 }
 
 h1 {
-  font-weight: lighter;
+  font-family: sans-serif;
+  font-weight: bold;
   font-size: 40px;
   letter-spacing: 2px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 1px;
   margin-bottom: 0px;
 }
 
@@ -36,9 +61,9 @@ input {
 }
 
 .ResultSection {
-  height: 300px
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 35px
+  font-size: 35px;
 }

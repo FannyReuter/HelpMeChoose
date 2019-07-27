@@ -1,17 +1,22 @@
 .submit {
-background-color: #49beb7;
-border-color: #085f63;
 width: 60px;
 height: 40px;
 font-size: 15px;
-color: #085f63;
-border-radius: 30px;
 }
 
 .AddOption {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.back {
+  height: 40px;
+  font-size: 15px;
+}
+
+.button {
   background-color: #49beb7;
   border-color: #085f63;
-  width: 80px;
   color: #085f63;
   border-radius: 30px;
 }
@@ -56,14 +61,15 @@ input {
   margin-top: 10px;
 }
 
-.AddOption {
-  margin-top: 10px;
-}
-
 .ResultSection {
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 35px;
+}
+
+.ResultPage {
+  text-align: center;
+  display: block;
 }

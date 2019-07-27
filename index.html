@@ -13,40 +13,52 @@
       <div class="inputs">
         <input placeholder="Alternativ..."></input>
       </div>
-      <button class="AddOption">Lägg till</button>
+      <button class="AddOption button">Lägg till</button>
     </div>
-    <div class="ResultSection"></div>
-    <button class='submit'>Gå!</button>
-      <div class="ResultPage">
-        <button class='back'>Börja om</button>
-        <h2 class="WinnerIs">Vinnaren är:</h2>
-      </div>
+    <button class='submit button'>Gå!</button>
+    <div class="ResultPage">
+      <h2 class="WinnerIs">Vinnaren är:</h2>
+      <div class="ResultSection"></div>
+      <button class='back button'>Börja om</button>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./functions.js"></script>
     <script>
       $(function() {
-        $('.ResultSection').hide()
         $('.ResultPage').hide()
 
         var add_Option = function() {
-          $('.inputs').append('<input></input>')
+          $('.inputs').append('<input placeholder="Alternativ..."></input>')
         }
         $('.AddOption').click(add_Option)
 
-        var options = []
         var submit = function() {
+          var options = []
           $('.InputSection').hide()
+          $('.ChooseText').hide()
+          $('.submit').hide()
           $('.ResultSection').css('display', 'flex')
+          $('.ResultPage').css('display', 'block')
           $('input').each(function() {
             options.push($(this).val())
-          $('.ChooseText').hide()
           })
           var winner = options[Math.floor(Math.random() * options.length)]
-          console.log(winner)
           $('.ResultSection').text(winner)
         }
         $('.submit').click(submit)
+
+        var goBack = function() {
+          $('.InputSection').show()
+          $('.ChooseText').show()
+          $('.submit').show()
+          $('.ResultPage').hide()
+          $('.inputs').empty()
+          add_Option()
+        }
+
+        $('.back').click(goBack)
       })
     </script>
   </body>
